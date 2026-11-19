@@ -1,0 +1,9 @@
+# ###-1.-Home-Screen-Create-a-clean,
+
+This is a code bundle for ###-1.-Home-Screen-Create-a-clean,. It's based on default Vite project. The original design is available at https://app.flowstep.ai/file?activeFileId=4915322e-1f26-4160-9b5f-5f5b5ddb7bcb.
+
+## Running the code
+
+Run `npm i` and `npm run setup` to install the dependencies.
+
+Run `npm run dev` to start the development server.

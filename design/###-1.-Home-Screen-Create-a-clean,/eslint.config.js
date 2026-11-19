@@ -1,0 +1,29 @@
+import js from "@eslint/js";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig, globalIgnores } from "eslint/config";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+
+export default defineConfig([
+  // The component libraries are written into the project, not by its author.
+  globalIgnores(["dist", "src/components/flowcn", "src/components/ui"]),
+  {
+    files: ["**/*.{ts,tsx}"],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+  },
+  {
+    // The entry renders the app: it exports nothing for Fast Refresh to keep.
+    files: ["src/main.tsx"],
+    rules: { "react-refresh/only-export-components": "off" },
+  },
+]);
