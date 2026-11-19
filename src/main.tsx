@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 // prettier-ignore
 import EngineerMindLanding from "./EngineerMind-Landing.tsx";
 import EngineerMindHome from "./EngineerMind-Home.tsx";
@@ -14,7 +14,7 @@ import EngineeringReport from "./Engineering-Report.tsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<EngineerMindLanding />} />
         <Route path="/landing" element={<EngineerMindLanding />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/results-and-validation" element={<ResultsAndValidation />} />
         <Route path="/engineering-report" element={<EngineeringReport />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
