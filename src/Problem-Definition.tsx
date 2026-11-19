@@ -327,7 +327,7 @@ export default function ProblemDefinition() {
                       </div>
                       <div className="rounded-lg bg-card border border-border overflow-hidden">
                         <img
-                          src="/assets/generated/e7ff1ee0-742e-46eb-808f-3730a2a68983.jpg"
+                          src={`${import.meta.env.BASE_URL}assets/generated/e7ff1ee0-742e-46eb-808f-3730a2a68983.jpg`}
                           alt="CFD visualization preview"
                           className="w-full h-40 object-cover"
                         />
